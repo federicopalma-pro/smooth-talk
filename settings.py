@@ -105,6 +105,48 @@ class MySettings(BaseModel):
         default=Languages.Automatic,
     )
 
+    tag_1: str = Field(
+        title="Tag 1",
+        description="Define the tag with a single word, no uppercase letters or special characters allowed",
+        default="",
+        pattern=r"^[a-z0-9]*$",
+    )
+
+    prompt_1: str = Field(
+        title="Prompt 1",
+        description="Write your special prompt here",
+        default="",
+        extra={"type": "TextArea"},
+    )
+
+    tag_2: str = Field(
+        title="Tag 2",
+        description="Define the tag with a single word, no uppercase letters or special characters allowed",
+        default="",
+        pattern=r"^[a-z0-9]*$",
+    )
+
+    prompt_2: str = Field(
+        title="Prompt 2",
+        description="Write your special prompt here",
+        default="",
+        extra={"type": "TextArea"},
+    )
+
+    tag_3: str = Field(
+        title="Tag 3",
+        description="Define the tag with a single word, no uppercase letters or special characters allowed",
+        default="",
+        pattern=r"^[a-z0-9]*$",
+    )
+
+    prompt_3: str = Field(
+        title="Prompt 3",
+        description="Write your special prompt here",
+        default="",
+        extra={"type": "TextArea"},
+    )
+
 
 @plugin
 def settings_model():
