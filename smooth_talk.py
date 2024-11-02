@@ -53,7 +53,7 @@ def before_cat_reads_message(user_message_json: Dict, cat) -> Dict:
             log.error(f"Error: Unable to detect language {language}")
 
     else:
-        cat.working_memory.update({"language": language_selected})
+        cat.working_memory.language = language_selected
 
     return user_message_json
 
